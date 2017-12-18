@@ -1,4 +1,4 @@
 # Autonomous-Rally-Car
 Developing autonomous rally car
 
-Lab Files are downloaded from [Prof. Voyles's webpage:](http://web.ics.purdue.edu/~rvoyles/Classes/ROSprogramming/index.html)
+This project is a part of ECET 581 course (ROS Programming) offered by [Prof. Voyles's](http://web.ics.purdue.edu/~rvoyles/Classes/ROSprogramming/index.html)
