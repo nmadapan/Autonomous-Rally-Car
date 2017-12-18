@@ -1,0 +1,26 @@
+<launch>	
+
+	<!-- Load a Map  -->
+	<arg name="map_file" default="$(find common_resources)/resources/map/KNOY_speedway.yaml"/>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+
+	<node pkg="urg_node" type="urg_node" name="run_hokuyo_10lx" >
+		<param name="ip_address" value="128.46.112.200"/>
+	</node>
+
+	<!-- localization using amcl -->
+	<include file="$(find common_resources)/launch/amcl.launch"/>
+
+	<!-- Visualisation RVIZ -->
+	<node pkg="rviz" type="rviz" name="rviz" />
+
+
+
+
+	<!-- CAN NOT COPY : CHANGE FOLDER NAMES --> 	
+	<node pkg="knoy_speedway_basic" type="plot_waypoints_on_map.py" output="screen" name="plot_waypoints_on_map" />	
+
+</launch>
+
+
